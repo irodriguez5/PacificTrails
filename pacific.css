@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #eaeaea;
+    color: #666666;
+    font-family: ariel, helvetica, sans-serif;
+
+}
+
+#wrapper{
+    background-color: #90c7e3;
+    background-image:linear-gradient(to bottom, #ffffff, #90c7e3);
+    background-position: center;
+
+}
+
+header{
+    background-color: #003271; color: #ffffff;
+    text-align: center;
+}
+header a:link{color: #ffffff;}
+
+header a:visited{color: #ffffff;}
+
+header a:hover{color: #90c7e3;}
+header a{text-decoration: none;}
+
+
+
+nav{
+    font-weight: bold;
+    padding: 0;
+    font-size: 120%;
+    text-align: center;
+}
+nav li{
+    border-bottom:1px solid darkblue;
+}
+
+nav a{
+    text-decoration: none;
+    transition: color 3s ease-out;
+}
+
+nav a:link{color: #5c7fa3;}
+
+nav a:visited{color: #344873;}
+
+nav a:hover{color: #a52a2a;}
+
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+
+}
+main {
+    padding: 1px 30px 20px 20px;
+    display: block;
+    background: #ffffff;
+    margin-left: 190px;
+    contain: content;
+    overflow: auto;
+
+}
+
+h1{
+    font-family: georgia, times new roman, serif;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    letter-spacing: 0.25em;
+}
+
+h2{
+    color: #1976d2;
+    font-family: georgia, times new roman, serif;
+    text-shadow: 1px 1px 1px  #cccccc;
+}
+
+h3{
+    font-family: georgia, times new roman, serif;
+    color: #000033;
+
+}
+
+ main ul{
+    list-style-image: url(/images/marker.gif);
+}
+
+footer{
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: georgia, times new roman, serif;
+    padding: 2em;
+    margin-left: 190px;
+    background-color: #ffffff;
+}
+
+dt{
+    color: #002171;
+}
+
+.resort{
+    color: #1976d2;
+    font-weight: bold;
+}
+
+#contact{
+    font-size: 90%;
+}
+img {
+    background-image: url(/images/coast.jpg);
+    width: 100%;
+}
+
+#homehero{
+    height: 300px;
+    background-image:url("/images/coast.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 190px;
+}
+img{
+    background-image:url("/images/yurt.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+#yurthero{
+    height: 300px;
+    background-image:url("/images/yurt.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 190px;
+}
+img{
+    background-image: url("/images/trail.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+#trailhero{
+    height: 300px;
+    background-image:url("/images/trail.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-left: 190px;
+}
+table{
+    border: 2px solid #3399cc;
+    border-collapse: collapse;
+}
+table td, th{
+    padding: 0.5em;
+    border: 2px solid #3399cc;
+}
+table td{
+    text-align: center;
+}
+.text{
+    text-align: left;
+}
+tr:nth-of-type(odd){background-color: #f5fafc;}
+form{
+    display: flex;
+    flex-flow: column nowrap;
+}
+input, textarea{
+    margin-bottom: .5em;
+}
+video, embed{
+    float:right;
+    padding-left: 20px;
+}
+
+@media  (min-width: 600px){
+    nav ul{
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: space-around;
+    }
+    nav li{
+        border-bottom: none;
+    }
+    section{
+        padding-left: 2em;
+        padding-right: 2em;
+        grid-row: 2/3;
+        grid-column: auto;
+    }
+    .content main{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    h2{
+        grid-row: 1/2;
+        grid-column: 1/5;
+    }
+
+    #special {
+        grid-row: auto;
+        grid-column: 1/5;
+    }
+    footer{
+        grid-row: auto;
+        grid-column: 1/5;
+    }
+    form{
+        width: 60%;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 6em 1fr;
+        grid-template-rows: auto;
+    }
+    input[type=submit]{
+        grid-column: 2/3;
+        width: 9em;
+    }
+
+}
+@media (min-width: 1024px){
+    nav ul{
+        flex-direction: column;
+        padding-top: 1em;
+    }
+    nav{
+        text-align: left;
+        padding-left: 1em;
+        grid-row: 2/5;
+        grid-column: 1/2;
+    }
+    #wrapper{
+        margin:auto;
+        width: 80%;
+        border: darkblue;
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: auto;
+    }
+    header{
+        grid-row: 1/2;
+        grid-column: 1/4;
+    }
+    div{
+        grid-row: 2/3;
+        grid-column: 2/4;
+    }
+    main{
+        grid-row: 3/4;
+        grid-column: 2/4;
+    }
+    footer{
+        grid-row: 4/5;
+        grid-column: 2/4;
+    }
+}
+
+
+
